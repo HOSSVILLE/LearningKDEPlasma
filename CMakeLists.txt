@@ -30,7 +30,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
     
-set(tutorial3_SRCS main.cpp mainwindow.cpp)
+set(tutorial3_SRCS src/main.cpp src/mainwindow.cpp)
 
 add_executable(tutorial3 ${tutorial3_SRCS})
 
@@ -45,4 +45,4 @@ target_link_libraries(tutorial3
 
 
 install(TARGETS tutorial3  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES tutorial3ui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/tutorial3)
+install(FILES src/tutorial3ui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/tutorial3)
